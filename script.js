@@ -40,7 +40,9 @@ document.addEventListener("keydown", (e) => {
       document.getElementById("divide").click();
       break;
     case ".":
-      document.getElementById("float").click();
+      if (!display.textContent.includes(".")) {
+        document.getElementById("float").click();
+      }
       break;
     case "Backspace":
       deleteButton.click();
