@@ -70,7 +70,10 @@ equalsButton.addEventListener("click", () => {
     memoryDisplay.textContent = "Stop screwing around.";
     return;
   }
-
+  if (operation.x == "." || operation.y == ".") {
+    clearButton.click();
+    return;
+  }
   operation.result = operate(
     operation.sign,
     parseFloat(operation.x),
