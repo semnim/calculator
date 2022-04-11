@@ -18,7 +18,10 @@ clearButton.addEventListener("click", () => {
      display.textContent = "0";
 });
 deleteButton.addEventListener("click", () => {
-    console.log("log");
+    if (display.textContent.length == 1) {
+        display.textContent = "0";
+        return;
+    }
     display.textContent = display.textContent.slice(0, -1);
 });
 
